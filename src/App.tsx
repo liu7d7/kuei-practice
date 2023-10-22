@@ -347,7 +347,7 @@ class SigfigNumber {
       }
     }
 
-    this.value = parseFloat(precise).toExponential(decimals).replace("e0", "");
+    this.value = parseFloat(precise).toExponential(decimals).replace("e+0", "").replace("e-0", "");
 
     return this;
   }
@@ -489,10 +489,7 @@ function PeriodicTrends(props: { moveOn: () => void }) {
   const [got, setGot] = React.useState("");
 
   return (
-    <div style={{
-      width: "calc(max(66vh, 66vw) / 2)",
-      height: "calc(max(66vh, 66vw) / 2)"
-    }} className={"rounded-full border-black border-2 flex justify-center content-center place-items-center"}>
+    <div className={"flex justify-center content-center place-items-center"}>
       <div className={"w-max flex flex-col justify-center content-center place-items-center"}>
         <div>
           <span dangerouslySetInnerHTML={{__html: q.question}}/>
@@ -500,7 +497,7 @@ function PeriodicTrends(props: { moveOn: () => void }) {
         <VPad amount={"1rem"}/>
         { ansVisible &&
           <div className={"flex flex-col justify-center content-center place-items-center"}>
-            <div>the answer was {q.answer.toString()}</div>
+            <div>the answer was <b>{q.answer.toString()}</b></div>
             <VPad amount={"1rem"}/>
             <button onClick={props.moveOn}>move on?</button>
           </div>
@@ -580,10 +577,7 @@ function CoulombQuestion(props: { moveOn: () => void }) {
   const [got, setGot] = React.useState("");
 
   return (
-    <div style={{
-      width: "calc(max(66vh, 66vw) / 2)",
-      height: "calc(max(66vh, 66vw) / 2)"
-    }} className={"rounded-full border-black border-2 flex justify-center content-center place-items-center"}>
+    <div className={"flex justify-center content-center place-items-center"}>
       <div className={"w-max flex flex-col justify-center content-center place-items-center"}>
         <div>
           find the force between a charge of
@@ -647,6 +641,13 @@ function CoulombQuestion(props: { moveOn: () => void }) {
                 <div>
                   <i>k<sub>e</sub></i> is 9.0&times;10<sup>9</sup> Nm<sup>2</sup>/C<sup>2</sup>.
                 </div>
+                <VPad amount={"1rem"}/>
+                <div>
+                  answer in this format: xe(+/-)y, repulsive/attractive
+                </div>
+                <div>
+                  e.g. 2.3&times;10<sup>3</sup> = 2.3e+3
+                </div>
               </div>
             }
             <VPad amount={"1rem"}/>
@@ -683,10 +684,7 @@ function ZeffQuestion(props: { moveOn: () => void }) {
   const [got, setGot] = React.useState("");
 
   return (
-    <div style={{
-      width: "calc(max(66vh, 66vw) / 2)",
-      height: "calc(max(66vh, 66vw) / 2)"
-    }} className={"rounded-full border-black border-2 flex justify-center content-center place-items-center"}>
+    <div className={"flex justify-center content-center place-items-center"}>
       <div className={"w-max flex flex-col justify-center content-center place-items-center"}>
         <div>
           find the <b>Z<sub>eff</sub></b> for an electron in
@@ -777,6 +775,9 @@ function App() {
 
   return (
     <div className={`w-full h-screen flex place-items-center justify-center content-center ${q}`}>
+      <div className={"w-0 h-0 bg-red-200"}/>
+      <div className={"w-0 h-0 bg-green-200"}/>
+      <div className={"w-0 h-0 bg-white"}/>
       { q % 3 === 0 &&
         <ZeffQuestion moveOn={moveOn}/>
       }
