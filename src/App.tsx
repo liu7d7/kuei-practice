@@ -467,18 +467,18 @@ class FreeAnswerQuestion {
 }
 
 const FREE_ANS_QS = [
-  new FreeAnswerQuestion("Where is the highest electronegativity?", /top-left|topleft|top\sleft|fluorine/),
-  new FreeAnswerQuestion("Where is the lowest electronegativity?", /bottom-right|bottomright|bottom\sright/),
-  new FreeAnswerQuestion("Where is the highest atomic radius?", /bottom-right|bottomright|bottom\sright/),
-  new FreeAnswerQuestion("Where is the lowest atomic radius?", /top-left|topleft|top\sleft/),
-  new FreeAnswerQuestion("Where is the highest ionic radius?", /bottom-right|bottomright|bottom\sright/),
-  new FreeAnswerQuestion("Where is the lowest ionic radius?", /top-left|topleft|top\sleft/),
-  new FreeAnswerQuestion("Where is the highest Z<sub>eff</sub>?", /top-left|topleft|top\sleft/),
-  new FreeAnswerQuestion("Where is the lowest Z<sub>eff</sub>?", /bottom-right|bottomright|bottom\sright/),
-  new FreeAnswerQuestion("Where is the highest ionization energy?", /top-left|topleft|top\sleft/),
-  new FreeAnswerQuestion("Where is the lowest ionization energy?", /bottom-right|bottomright|bottom\sright/),
-  new FreeAnswerQuestion("Where is the highest ionization energy?", /top-left|topleft|top\sleft/),
-  new FreeAnswerQuestion("Where is the lowest ionization energy?", /bottom-right|bottomright|bottom\sright/),
+  new FreeAnswerQuestion("Where is the highest electronegativity?", /top-right|topright|top\sright|fluorine/),
+  new FreeAnswerQuestion("Where is the lowest electronegativity?", /bottom-left|bottomleft|bottom\sleft/),
+  new FreeAnswerQuestion("Where is the highest atomic radius?", /bottom-left|bottomleft|bottom\sleft/),
+  new FreeAnswerQuestion("Where is the lowest atomic radius?", /top-right|topright|top\sright/),
+  new FreeAnswerQuestion("Where is the highest ionic radius?", /bottom-left|bottomleft|bottom\sleft/),
+  new FreeAnswerQuestion("Where is the lowest ionic radius?", /top-right|topright|top\sright/),
+  new FreeAnswerQuestion("Where is the highest Z<sub>eff</sub>?", /top-right|topright|top\sright/),
+  new FreeAnswerQuestion("Where is the lowest Z<sub>eff</sub>?", /bottom-left|bottomleft|bottom\sleft/),
+  new FreeAnswerQuestion("Where is the highest ionization energy?", /top-right|topright|top\sright/),
+  new FreeAnswerQuestion("Where is the lowest ionization energy?", /bottom-left|bottomleft|bottom\sleft/),
+  new FreeAnswerQuestion("Where is the highest electron affinity?", /top-right|topright|top\sright/),
+  new FreeAnswerQuestion("Where is the lowest electron affinity?", /bottom-left|bottomleft|bottom\sleft/),
 ]
 
 function PeriodicTrends(props: { moveOn: () => void }) {
