@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/kuei-practice/static/css/main.50cabb98.css",
-    "main.js": "/kuei-practice/static/js/main.87011fbc.js",
+    "main.js": "/kuei-practice/static/js/main.c1de8510.js",
     "static/js/787.84ce8f13.chunk.js": "/kuei-practice/static/js/787.84ce8f13.chunk.js",
     "index.html": "/kuei-practice/index.html",
     "main.50cabb98.css.map": "/kuei-practice/static/css/main.50cabb98.css.map",
-    "main.87011fbc.js.map": "/kuei-practice/static/js/main.87011fbc.js.map",
+    "main.c1de8510.js.map": "/kuei-practice/static/js/main.c1de8510.js.map",
     "787.84ce8f13.chunk.js.map": "/kuei-practice/static/js/787.84ce8f13.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.50cabb98.css",
-    "static/js/main.87011fbc.js"
+    "static/js/main.c1de8510.js"
   ]
 }
